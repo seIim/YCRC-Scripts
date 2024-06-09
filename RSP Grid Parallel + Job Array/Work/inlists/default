@@ -124,6 +124,8 @@
          max_num_profile_models = 100
 	   log_directory = '../LOGS/logs_0'
 	   photo_directory = '../photos/photos_0'
+
+       profile_columns_file = 'columns.list'
 /
 
 &pgstar

@@ -6,8 +6,7 @@
 
       create_RSP_model = .true.
 
-      save_model_when_terminate = .true.
-      save_model_filename = 'final.mod'
+      save_model_when_terminate = .false.
 
       initial_zfracs = 6
 
@@ -16,7 +15,6 @@
       color_num_colors(2)=5
       color_file_names(3)='../colors/extra_color_file.dat'
       color_num_colors(3)=17
-
 
       set_initial_age = .true.
       initial_age = 0

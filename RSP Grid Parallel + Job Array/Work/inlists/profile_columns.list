@@ -1,0 +1,33 @@
+
+! Columns for my RSP run.
+! - Selim
+
+! MESA default Columns
+   zone           ! numbers start with 1 at the surface
+   mass           ! m/Msun. mass coordinate of outer boundary of cell.
+   logR           ! log10(radius/Rsun) at outer boundary of zone
+   logT           ! log10(temperature) at center of zone
+   logRho         ! log10(density) at center of zone
+   logP           ! log10(pressure) at center of zone\
+
+   x_mass_fraction_H
+   y_mass_fraction_He
+   z_mass_fraction_metals
+
+! RSP Columns
+   rsp_Et         ! Specific turbulent energy
+   rsp_erad       ! Specific internal (radiative) energy
+   rsp_Hp_face    ! Pressure scale height at cell face
+   rsp_Lc         ! Convective luminosity
+   rsp_Lr         ! Radiative luminosity
+   rsp_Lt         ! Turbulent luminosity 
+   rsp_Pt         ! Turbulent pressure, p_t, see Table 1 in MESA5
+   rsp_Uq         ! Viscous momentum transfer rate, U_q, see Table 1 in MESA5
+   rsp_Eq         ! Viscous energy transfer rate, epsilon_q, see Table 1 in MESA5
+   rsp_Pvsc       ! Artificial viscosity, p_av, see Table 1 in MESA5
+   rsp_gradT      ! Temperature gradient
+   rsp_Y_face     ! Superadiabatic gradient at cell face, Y_sag, see Table 1 in MESA5
+   rsp_damp       ! Turbulent dissipation, D, see Table 1 in MESA5
+   rsp_dampR      ! Radiative cooling, D_r, see Table 1 in MESA5
+   rsp_src        ! Source function, S, see Table 1 in MESA5
+   w

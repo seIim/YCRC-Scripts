@@ -9,7 +9,7 @@ thisrank = 0
 
 df = pd.read_csv('Grid/Input.dat', sep='\s+')
 
-df = df[ df['model'] % arraysize == thisrank]
+df = df[ df['model'] % arraysize == (thisrank - 1) ]
 
 os.chdir(f'Work/{thisrank}')
 

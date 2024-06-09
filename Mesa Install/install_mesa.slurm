@@ -2,14 +2,14 @@
 
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH -t 1-
+#SBATCH -t 02:00:00
 #SBATCH -J mesa_install
 #SBATCH --mail-type=ALL
-#SBATCH --mem-per-cpu=16G
+#SBATCH --mem-per-cpu=4G
 
 export MESA_DIR=/gpfs/gibbs/project/bellinger/sk3365/Mesa/mesa
 
-export OMP_NUM_THREADS=12
+export OMP_NUM_THREADS=2
 
 export MESASDK_ROOT=/gpfs/gibbs/project/bellinger/sk3365/Mesa/mesasdk
 
