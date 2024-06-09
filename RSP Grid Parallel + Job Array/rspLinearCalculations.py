@@ -19,7 +19,7 @@ for i in range(len(df)):
 
 	lines = getInlist(controls)
 
-	updateKey(lines, 'RSP_max_num_periods', 1)
+	updateKey(lines, 'max_model_number', 1)
 
 	updateInlist(df, controls, lines, i)
 
