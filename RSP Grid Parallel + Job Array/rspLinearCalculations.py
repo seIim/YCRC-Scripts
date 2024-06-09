@@ -15,6 +15,10 @@ os.chdir(f'Work/{thisrank}')
 
 controls = f'../inlists/controls_{thisrank}'
 
+inlist = getInlist('inlist')
+updateKey(inlist, 'extra_controls_inlist_name(1)', f"\'../inlists/controls_{thisrank}\'")
+writeAndSave('inlist', inlist)
+
 for i in range(len(df)):
 
 	lines = getInlist(controls)

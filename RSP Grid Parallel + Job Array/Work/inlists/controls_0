@@ -1,8 +1,8 @@
 &controls  
 
 	   RSP_mass = 13.8
-	   RSP_Teff = 4700.0
-	   RSP_L = 65650.0
+	   RSP_Teff = 4400.0
+	   RSP_L = 65000.0
 	   RSP_X = 0.74
 	   RSP_Z = 0.004
          
@@ -57,7 +57,7 @@
          RSP_default_PERIODLIN = 34560
 
 	   RSP_max_num_periods = -1
-         max_model_number = -1
+	   max_model_number = 1
 
  	       RSP_GREKM_avg_abs_frac_new = 0.1d0
          RSP_GREKM_avg_abs_limit = -1 ! 0.01d0
@@ -122,8 +122,8 @@
          history_interval = 1000
          terminal_interval = 4000     
          max_num_profile_models = 100
-	   log_directory = '../LOGS/logs_4'
-	   photo_directory = '../photos/photos_4'
+	   log_directory = '../LOGS/logs_0'
+	   photo_directory = '../photos/photos_0'
 /
 
 &pgstar

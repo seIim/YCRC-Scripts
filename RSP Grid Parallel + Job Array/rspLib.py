@@ -14,6 +14,13 @@ def getInlist(f):
 
 	return lines
 
+def writeAndSave(f, lines):
+	file = open(f, "w")
+	file.truncate(0)
+	for line in lines:
+		file.write(f"{line}")
+	file.close()
+
 def updateInlist(df, f, lines, ind):
 
 	for key in df.columns.values.tolist()[1:]:
@@ -22,12 +29,7 @@ def updateInlist(df, f, lines, ind):
 	updateKey(lines, "log_directory", f"\'../LOGS/logs_{ind}\'")
 	updateKey(lines, "photo_directory", f"\'../photos/photos_{ind}\'")
 
-	file = open(f, "w")
-	file.truncate(0)
-	for line in lines:
-		file.write(f"{line}")
-	file.close()
-
+	writeAndSave(f, lines)
 
 # df = pd.read_csv('linear_grid.dat', sep='\s+')
 

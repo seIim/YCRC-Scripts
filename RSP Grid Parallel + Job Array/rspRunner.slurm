@@ -31,4 +31,7 @@ echo -e '\n\n'
 module load Python
 module load make/4.3-GCCcore-10.2.0 Perl/5.32.0-GCCcore-10.2.0 X11/20201008-GCCcore-10.2.0 zlib/1.2.11-GCCcore-10.2.0 binutils/2.35-GCCcore-10.2.0 tcsh/6.22.03-GCCcore-10.2.0
 
+mkdir Work/$SLURM_ARRAY_TASK_ID
+cp -a Work/default/. Work/$SLURM_ARRAY_TASK_ID/
+
 Python rspLinearCalculations.py
