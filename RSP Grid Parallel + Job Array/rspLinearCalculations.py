@@ -4,16 +4,24 @@ from rspLib import *
 
 # arraysize = int(os.environ['SLURM_ARRAY_TASK_COUNT'])
 # thisrank = int(os.environ['SLURM_ARRAY_TASK_ID'])
-arraysize = 50
+arraysize = 10
 thisrank = 0
 
-df = pd.read_csv('linear_grid.dat', sep='\s+')
+df = pd.read_csv('Grid/Input.dat', sep='\s+')
 
 df = df[ df['model'] % arraysize == thisrank]
 
-# print('These are the models I would run if this was real: \n')
-# print(df)
+os.chdir(f'Work/{thisrank}')
 
-os.chdir(os.environ['MESA_DIR'])
-# print(os.listdir())
+controls = f'../inlists/controls_{thisrank}'
 
+for i in range(len(df)):
+
+	lines = getInlist(controls)
+
+	updateKey(lines, 'RSP_max_num_periods', 1)
+
+	updateInlist(df, controls, lines, i)
+
+	os.system('./mk')
+	os.system('./rn')

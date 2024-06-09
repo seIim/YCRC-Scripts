@@ -6,7 +6,7 @@ def updateKey(lines, key, newval):
 		if key in line:
 			lines[i] = f"\t   {key} = {newval}\n"
 
-def getInlinst(f):
+def getInlist(f):
 
 	file = open(f, "r")
 	lines = file.readlines()
@@ -14,13 +14,13 @@ def getInlinst(f):
 
 	return lines
 
-def updateInlist(df, f, data, ind):
+def updateInlist(df, f, lines, ind):
 
 	for key in df.columns.values.tolist()[1:]:
 		updateKey(lines, key, df[key].iloc[ind])
 
-	updateKey(lines, "log_directory", f"\'LOGS/logs_{ind}\'")
-	updateKey(lines, "photo_directory", f"\'photos/photos_{ind}\'")
+	updateKey(lines, "log_directory", f"\'../LOGS/logs_{ind}\'")
+	updateKey(lines, "photo_directory", f"\'../photos/photos_{ind}\'")
 
 	file = open(f, "w")
 	file.truncate(0)

@@ -1,0 +1,69 @@
+&star_job
+      
+      read_extra_star_job_inlist(1) = .false.
+      
+      show_log_description_at_start = .false.
+
+      create_RSP_model = .true.
+
+      save_model_when_terminate = .true.
+      save_model_filename = 'final.mod'
+
+      initial_zfracs = 6
+
+      color_num_files=3
+      color_file_names(2)='blackbody_johnson.dat'
+      color_num_colors(2)=5
+      color_file_names(3)='../colors/extra_color_file.dat'
+      color_num_colors(3)=17
+
+
+      set_initial_age = .true.
+      initial_age = 0
+
+      set_initial_model_number = .true.
+      initial_model_number = 0
+
+      profile_starting_model = .true.
+      
+      set_initial_cumulative_energy_error = .true.
+      new_cumulative_energy_error = 0d0
+/
+
+&eos
+      read_extra_eos_inlist(1) = .false.
+      use_FreeEOS = .true.
+/
+
+&kap
+      read_extra_kap_inlist(1) = .false.
+      
+      kap_file_prefix = 'a09'
+      kap_lowT_prefix = 'lowT_fa05_a09p'
+      kap_CO_prefix = 'a09_co'
+      Zbase = 0.004 !0.02d0
+
+      cubic_interpolation_in_X = .false.
+      cubic_interpolation_in_Z = .false.
+      include_electron_conduction = .true.
+      use_Zbase_for_Type1 = .true.
+      use_Type2_opacities = .true.
+      kap_Type2_full_off_X  =  0.71d0
+      kap_Type2_full_on_X  =  0.70d0
+      kap_Type2_full_off_dZ  =  1d-3
+      kap_Type2_full_on_dZ  =  1d-2
+
+/
+
+&controls
+
+      read_extra_controls_inlist(1) = .true.
+
+      extra_controls_inlist_name(1) = '../inlists/controls_0'
+
+/
+
+&pgstar
+
+/
+
