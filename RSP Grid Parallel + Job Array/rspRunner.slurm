@@ -35,6 +35,6 @@ mkdir Work/$SLURM_ARRAY_TASK_ID
 cp -a Work/default/. Work/$SLURM_ARRAY_TASK_ID/
 
 mkdir Work/inlists/controls_$SLURM_ARRAY_TASK_ID
-cp Work/inlists/default. Work/inlists/controls_$SLURM_ARRAY_TASK_ID
+cp Work/inlists/default Work/inlists/controls_$SLURM_ARRAY_TASK_ID
 
 Python rspLinearCalculations.py
