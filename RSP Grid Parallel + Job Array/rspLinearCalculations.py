@@ -16,3 +16,4 @@ df = df[ df['model'] % arraysize == thisrank]
 
 os.chdir(os.environ['MESA_DIR'])
 # print(os.listdir())
+
