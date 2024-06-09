@@ -117,11 +117,11 @@
          !trace_history_value_name(3) = 'rsp_GREKM_avg_abs'
 
          do_history_file = .true.
-         photo_interval = 2000     
-         profile_interval = 1000
+         photo_interval = 2000
+         profile_interval = 4000
          history_interval = 1000
-         terminal_interval = 4000     
-         max_num_profile_models = 100
+         terminal_interval = 4000
+         max_num_profile_models = 1000
 	   log_directory = '../LOGS/logs_0'
 	   photo_directory = '../photos/photos_0'
 
