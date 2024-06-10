@@ -26,9 +26,6 @@ def updateInlist(df, f, lines, ind):
 	for key in df.columns.values.tolist()[1:]:
 		updateKey(lines, key, df[key].iloc[ind])
 
-	updateKey(lines, "log_directory", f"\'../LOGS/logs_{ind}\'")
-	updateKey(lines, "photo_directory", f"\'../photos/photos_{ind}\'")
-
 	writeAndSave(f, lines)
 
 # df = pd.read_csv('linear_grid.dat', sep='\s+')

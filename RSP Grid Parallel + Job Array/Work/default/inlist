@@ -1,6 +1,8 @@
 &star_job
       
       read_extra_star_job_inlist(1) = .false.
+
+      profile_columns_file= '../inlists/columns.list'
       
       show_log_description_at_start = .false.
 
