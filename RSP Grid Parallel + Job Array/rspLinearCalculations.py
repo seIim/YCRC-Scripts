@@ -2,10 +2,10 @@ import os
 import pandas as pd 
 from rspLib import *
 
-# arraysize = int(os.environ['SLURM_ARRAY_TASK_COUNT'])
-# thisrank = int(os.environ['SLURM_ARRAY_TASK_ID'])
-arraysize = 10
-thisrank = 0
+arraysize = int(os.environ['SLURM_ARRAY_TASK_COUNT'])
+thisrank = int(os.environ['SLURM_ARRAY_TASK_ID'])
+# arraysize = 10
+# thisrank = 0
 
 df = pd.read_csv('Grid/Input.dat', sep='\s+')
 
